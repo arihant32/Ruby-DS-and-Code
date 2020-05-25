@@ -1,4 +1,4 @@
-/**
+=begin
 Linked List Cycle : https://leetcode.com/problems/linked-list-cycle/
 
 Given a linked list, determine if it has a cycle in it.
@@ -33,7 +33,7 @@ Explanation: There is no cycle in the linked list.
 Follow up:
 
 Can you solve it using O(1) (i.e. constant) memory?
-**/
+=end
 
 
 # Definition for singly-linked list.
@@ -47,6 +47,7 @@ Can you solve it using O(1) (i.e. constant) memory?
 
 # @param {ListNode} head
 # @return {Boolean}
+
 def hasCycle(head)
     return false unless head
     small = head
