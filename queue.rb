@@ -5,6 +5,7 @@ class Queue
 	def initialize
 		# in ruby, array can work like queue if we use unshift method
 		# unshift method : add object to the front of array/self, moving other elements upwards
+		# # shift removes the first element of array/self and returns it (shifting all other elements down by one). Returns nil if the array is empty.
 		# so will add the element at the front and remove at the end
 		# array[0] will be the rear of our queue. array[n] will be the front of the queue.
 		@array = Array.new # or simple @array = []
