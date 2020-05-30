@@ -107,4 +107,3 @@ Test.new.run
  postorder is : 
 2 4 3 6 8 7 5 
 =end
-2.4.7 :1686 > 
