@@ -98,3 +98,13 @@ class Test
 end
 
 Test.new.run
+
+=begin
+ inorder is : 
+2 3 4 5 6 7 8 
+ preorder is : 
+5 3 2 4 7 6 8 
+ postorder is : 
+2 4 3 6 8 7 5 
+=end
+2.4.7 :1686 > 
