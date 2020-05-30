@@ -17,25 +17,22 @@ class BST
 		@root = nil
 	end
 
-	def insert node = nil, val
+	def _insert node = nil, val
+		return get_new_node val if node.nil?
+		if val < node.val
+			node.left = _insert node.left, val
+		else
+			node.right = _insert node.right, val
+		end
+		return node
+	end
+
+	def insert val
 		if @root.nil?
 			@root = get_new_node val 
 			return @root
 		end
-		if val < node.val
-			if node.left.nil?
-				node.left = get_new_node val
-			else
-				insert node.left, val
-			end	
-		else
-			if node.right.nil?
-				node.right = get_new_node val
-			else
-				insert node.right, val
-			end	
-		end
-		return node
+		_insert @root, val	
 	end
 
 	def inorder root
@@ -63,6 +60,14 @@ class BST
 
 	end
 
+	def search val
+
+	end
+
+	def size
+
+	end
+
 	private
 
 	def get_new_node val
@@ -75,13 +80,13 @@ class Test
 
 	def run
 		bst = BST.new
-		bst.insert(bst.root, 5)
-		bst.insert(bst.root, 3)
-		bst.insert(bst.root, 7)
-		bst.insert(bst.root, 2)
-		bst.insert(bst.root, 4)
-		bst.insert(bst.root, 6)
-		bst.insert(bst.root, 8)
+		bst.insert 5
+		bst.insert 3
+		bst.insert 7
+		bst.insert 2
+		bst.insert 4
+		bst.insert 6
+		bst.insert 8
 		puts "\n inorder is : "
 		bst.inorder bst.root
 		puts "\n preorder is : "
@@ -92,3 +97,4 @@ class Test
 
 end
 
+Test.new.run
