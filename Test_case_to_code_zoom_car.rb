@@ -133,8 +133,13 @@ class Activity < FakeData
   def self.get_combine_array array
     # array.each_with_object([]) { |md, arr| arr << send(md) }.flatten
     # or
-    array.each_with_object([]) { |md, arr| arr.push(*send(md)) }
+    # array.each_with_object([]) { |md, arr| arr.push(*send(md)) }
+    # or 
+    result = []
+    array.each_with_object([]) { |md, arr|  result += send(md) }
+    result
   end
+
 
 
 end
