@@ -114,3 +114,26 @@ Expected: [4, 5, 6]
 ## My solution
 
 
+class Activity < FakeData
+
+  def self.find(options={})
+    return all if options.empty?
+    return unless is_valid?(options)
+    indexes = options[:indexes]
+    types = indexes[:type].is_a?(Array) ? indexes[:type] : [indexes[:type]]
+    actions = indexes[:action].is_a?(Array) ? indexes[:action] : [indexes[:action]]
+    (get_combine_array(types) & get_combine_array(actions)).sort
+  end
+
+  def self.is_valid?(options)
+    return unless options.key?(:indexes)
+    options[:indexes].key?(:type) || options[:indexes].key?(:action)
+  end
+
+  def self.get_combine_array array
+    array.each_with_object([]) { |md, arr| arr << send(md) }.flatten
+  end
+
+end
+
+
