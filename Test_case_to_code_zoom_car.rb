@@ -139,9 +139,7 @@ class Activity < FakeData
     array.each_with_object([]) { |md, arr|  result += send(md) }
     result
   end
-
-
-
+ 
 end
 
 
