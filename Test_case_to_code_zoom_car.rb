@@ -142,4 +142,19 @@ class Activity < FakeData
  
 end
 
+=begin
+
+ajain$ ruby FakeData.rb
+Run options: --seed 21672
+
+# Running:
+
+.....
+
+Finished in 0.001370s, 3649.6358 runs/s, 3649.6358 assertions/s.
+
+5 runs, 5 assertions, 0 failures, 0 errors, 0 skips
+
+=end
+
 
