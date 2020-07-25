@@ -1,7 +1,7 @@
-==begin
+=begin
  You are given the below class and if you all the below file then you can see all the test cases are failing.
  So you need to complete the "find method of Activity class" in a way that all the test cases should pass.
-==end
+=end
 
 class FakeData
 
@@ -64,3 +64,53 @@ if __FILE__ == $PROGRAM_NAME
     end
   end
 end
+
+=begin
+
+ajain$ ruby FakeData.rb
+Run options: --seed 52438
+
+# Running:
+
+FFFFF
+
+Finished in 0.019041s, 262.5912 runs/s, 262.5912 assertions/s.
+
+  1) Failure:
+ActivityTest#test_four [FakeData.rb:52]:
+Expected: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  Actual: nil
+
+  2) Failure:
+ActivityTest#test_five [FakeData.rb:57]:
+Expected: [3, 7, 8, 9, 10]
+  Actual: nil
+
+  3) Failure:
+ActivityTest#test_one [FakeData.rb:40]:
+--- expected
++++ actual
+@@ -1 +1 @@
+-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
++nil
+
+
+  4) Failure:
+ActivityTest#test_three [FakeData.rb:48]:
+Expected: [2, 3, 6, 7, 8, 9, 10]
+  Actual: nil
+
+  5) Failure:
+ActivityTest#test_two [FakeData.rb:44]:
+Expected: [4, 5, 6]
+  Actual: nil
+
+5 runs, 5 assertions, 5 failures, 0 errors, 0 skips
+
+
+=end
+
+
+## My solution
+
+
